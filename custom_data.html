@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actor Prabhas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+
+        .profile-image {
+            width: 200px;
+            height: auto;
+            border-radius: 100px;
+            margin: 20px auto;
+        }
+
+        h2 {
+            margin: 20px 0;
+            font-size: 24px;
+        }
+
+        p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .data-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 0;
+        }
+
+        .data-item strong {
+            font-weight: bold;
+        }
+
+        .data-item span {
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" 
+         data-name="Prabhas" 
+         data-birthdate="October 23, 1979" 
+         data-nationality="Indian" 
+         data-films="20">
+        <h1>Actor Prabhas</h1>
+        <img src="./prabha2.webp" alt="Prabhas" class="profile-image">
+        <h2>Name: <span id="actor-name"></span></h2>
+        <div class="data-item">
+            <strong>Birthdate:</strong>
+            <span id="birthdate"></span>
+        </div>
+        <div class="data-item">
+            <strong>Nationality:</strong>
+            <span id="nationality"></span>
+        </div>
+        <div class="data-item">
+            <strong>Number of Films:</strong>
+            <span id="films"></span>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const container = document.querySelector('.container');
+            const name = container.getAttribute('data-name');
+            const birthdate = container.getAttribute('data-birthdate');
+            const nationality = container.getAttribute('data-nationality');
+            const films = container.getAttribute('data-films')
+            document.getElementById('actor-name').textContent = name;
+            document.getElementById('birthdate').textContent = birthdate;
+            document.getElementById('nationality').textContent = nationality;
+            document.getElementById('films').textContent = films;
+        });
+    </script>
+</body>
+</html>
